@@ -6,7 +6,7 @@
  */
 void getting_stream_failed(char *fileName)
 {
-	fprintf(stderr, "Error: can't open file %s\n", fileName);
+	fprintf(stderr, "Error: Can't open file %s\n", fileName);
 	free_arguments();
 	fclose(arguments->stream);
 	exit(EXIT_FAILURE);
