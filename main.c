@@ -23,7 +23,7 @@ int main(int argc, char* argv[])
 		get_instruction(); /*run the funciton associated with opcode*/
 		run_instruction();
 		free_tokens(); /* free up memory for the tokens  */
-		printf("%s", arguments->line);
+		/*printf("%s", arguments->line);*/
 	}
 	close_stream(); /* close stream  */
 	free_arguments(); /* free up memory allocated for the arguments pointer  */
