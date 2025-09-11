@@ -6,10 +6,10 @@
  */
 void getting_stream_failed(char *fileName)
 {
-	fprintf(stderr, "Error: Can't open file %s\n", fileName);
-	free_arguments();
-	/*fclose(arguments->stream);*/
-	exit(EXIT_FAILURE);
+        fprintf(stderr, "Error: Can't open file %s\n", fileName);
+        free_arguments();
+        /*fclose(arguments->stream);*/
+        exit(EXIT_FAILURE);
 }
 
 /**
@@ -18,14 +18,14 @@ void getting_stream_failed(char *fileName)
  */
 void get_stream(char *fileName)
 {
-	int fd;
+        int fd;
 
-	fd = open(fileName, O_RDONLY);
-	if (fd == -1)
-		getting_stream_failed(fileName);
-	arguments->stream = fopen(fileName, "r");
-	if (arguments->stream == NULL)
-	{
-		getting_stream_failed(fileName);
-	}
+        fd = open(fileName, O_RDONLY);
+        if (fd == -1)
+                getting_stream_failed(fileName);
+        arguments->stream = fopen(fileName, "r");
+        if (arguments->stream == NULL)
+        {
+                getting_stream_failed(fileName);
+        }
 }
